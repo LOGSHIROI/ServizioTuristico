@@ -1,0 +1,7 @@
+
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !/public/*
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ /src/index.php/$0 [L]
+
+php_value include_path '.;C:/xampp/php/PEAR;C:/xampp/htdocs/k2'
